@@ -1,24 +1,21 @@
 package com.open;
 
 import java.io.File;
-import java.io.FileReader;
+
 import java.io.IOException;
 import java.nio.file.Files;
-import java.util.ArrayList;
+
 import java.util.Arrays;
 import java.util.List;
 
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-import org.json.JSONTokener;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.util.ResourceUtils;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
+import org.springframework.util.ResourceUtils;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonIOException;
@@ -75,9 +72,11 @@ public class JsonToStringApplication {
 				System.out.println(content);
 		
 		
-	     JsonObject myobject = (JsonObject) new JsonParser().parse(content);
+	    JsonObject myobject = (JsonObject) new JsonParser().parse(content);
+	    
+	    JSONArray jsonArray2 = new JSONArray(content);
 				
-		JsonObject response = (JsonObject) myobject.get("response");
+		JsonObject response = (JsonObject) jsonArray2.get("response");
 		
 				
 		JsonObject body = (JsonObject) response.get("body");
