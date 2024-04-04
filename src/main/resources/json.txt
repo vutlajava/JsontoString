@@ -1,0 +1,13 @@
+{
+    "information": [{
+        "timestamp": "xxxx",
+        "feature": "xxxx",
+        "ean": 1234,
+        "data": "xxxx"
+    }, {
+        "timestamp": "yyy",
+        "feature": "yyy",
+        "ean": 12345,
+        "data": "yyy"
+    }]
+}
